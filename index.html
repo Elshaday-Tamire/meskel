@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meskel &amp; Demera</title>
+<meta name="description" content="The meaning, history, and significance of Meskel and the Demera bonfire in the Ethiopian Orthodox Tewahedo tradition.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream: #fbf3e3;
+    --cream-deep: #f1e3c6;
+    --card: #ffffff;
+    --ink: #2a1810;
+    --ink-soft: #5a4636;
+    --maroon: #7c1f2e;
+    --maroon-deep: #5a1620;
+    --gold: #a97a2c;
+    --gold-bright: #b98a34;
+    --green: #2f4a3a;
+    --rule: #d9c49b;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --cream: #18110c;
+      --cream-deep: #221912;
+      --card: #241a12;
+      --ink: #f2e6d3;
+      --ink-soft: #cbb99e;
+      --maroon: #d9707e;
+      --maroon-deep: #e28d99;
+      --gold: #d8ab55;
+      --gold-bright: #e3bb6c;
+      --green: #74a488;
+      --rule: #4a3a26;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --cream: #18110c;
+    --cream-deep: #221912;
+    --card: #241a12;
+    --ink: #f2e6d3;
+    --ink-soft: #cbb99e;
+    --maroon: #d9707e;
+    --maroon-deep: #e28d99;
+    --gold: #d8ab55;
+    --gold-bright: #e3bb6c;
+    --green: #74a488;
+    --rule: #4a3a26;
+    color-scheme: dark;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Lora', Georgia, 'Times New Roman', serif;
+    font-size:17px;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%; display:block;}
+
+  .wrap{max-width:760px; margin:0 auto; padding-inline:20px;}
+
+  h1,h2,h3{
+    font-family:'Playfair Display', Georgia, serif;
+    font-weight:600;
+    line-height:1.18;
+    color:var(--ink);
+    text-wrap:balance;
+    margin:0;
+  }
+
+  .eyebrow{
+    font-family:'Cinzel', 'Playfair Display', serif;
+    font-weight:600;
+    font-size:0.72rem;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--maroon);
+  }
+
+  .divider{
+    display:flex; align-items:center; justify-content:center; gap:14px;
+    margin:2.6rem auto; width:100%; max-width:320px;
+  }
+  .divider::before,.divider::after{
+    content:""; height:1px; flex:1; background:var(--rule);
+  }
+  .divider .mark{
+    width:9px; height:9px; transform:rotate(45deg);
+    border:1.5px solid var(--gold-bright); flex:none;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    min-height:78vh;
+    display:flex;
+    align-items:flex-end;
+    background:#000;
+  }
+  .hero img{
+    position:absolute; inset:0; width:100%; height:100%;
+    object-fit:cover; object-position:center 62%;
+    opacity:0.88;
+  }
+  .hero::after{
+    content:"";
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(10,4,2,0.15) 0%, rgba(10,4,2,0.35) 45%, rgba(10,4,2,0.92) 100%);
+  }
+  .hero-content{
+    position:relative; z-index:1;
+    width:100%;
+    padding: 0 20px 3rem;
+    text-align:center;
+    color:#f7ecd8;
+  }
+  .hero-content .eyebrow{ color:var(--gold-bright); }
+  .hero h1{
+    color:#fbf3e3;
+    font-size:clamp(2.6rem, 8vw, 4.6rem);
+    margin:0.5rem 0 0.6rem;
+  }
+  .hero-amharic{
+    font-family:'Playfair Display', serif;
+    font-size:clamp(1.1rem, 3vw, 1.5rem);
+    color:#e7d3a8;
+    font-style:italic;
+    margin-bottom:0.9rem;
+  }
+  .hero-sub{
+    max-width:520px; margin:0 auto;
+    font-family:'Lora', serif;
+    font-size:1.05rem;
+    color:#e9dcc4;
+  }
+  .scroll-cue{
+    margin-top:2.2rem;
+    font-family:'Cinzel', serif;
+    font-size:0.65rem;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:#c9b184;
+  }
+
+  /* ---------- Sections ---------- */
+  section.block{ padding:4.2rem 0; }
+  section.block.alt{ background:var(--cream-deep); }
+
+  .lede{
+    font-size:1.18rem;
+    color:var(--ink-soft);
+    font-style:italic;
+    max-width:620px;
+  }
+
+  h2{ font-size:clamp(1.6rem, 4vw, 2.1rem); margin-top:0.35rem; }
+  h2 + p, h3 + p{ margin-top:0.9rem; }
+  p{ margin:1.05rem 0; }
+  p:first-of-type{ margin-top:0; }
+
+  .figure{
+    margin: 2.2rem 0;
+    border-radius:2px;
+    overflow:hidden;
+    box-shadow: 0 1px 0 var(--rule);
+  }
+  .figure img{ width:100%; height:auto; }
+  .figure figcaption{
+    font-family:'Lora', serif;
+    font-style:italic;
+    font-size:0.85rem;
+    color:var(--ink-soft);
+    padding:0.7rem 0.1rem 0;
+    border-bottom:1px solid var(--rule);
+    padding-bottom:0.9rem;
+  }
+
+  .two-col{
+    display:grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap:2.4rem;
+    align-items:center;
+  }
+  .two-col.reverse .col-img{ order:2; }
+  .two-col .figure{ margin:0; }
+  @media (max-width:680px){
+    .two-col, .two-col.reverse .col-img{ order:0; }
+    .two-col{ grid-template-columns:1fr; gap:1.4rem; }
+  }
+
+  blockquote{
+    margin:2rem 0; padding: 0.2rem 0 0.2rem 1.3rem;
+    border-left:3px solid var(--maroon);
+    font-family:'Playfair Display', serif;
+    font-style:italic;
+    font-size:1.15rem;
+    color:var(--ink);
+  }
+  blockquote cite{
+    display:block; margin-top:0.6rem;
+    font-family:'Lora', serif; font-style:normal;
+    font-size:0.82rem; color:var(--ink-soft);
+  }
+
+  .facts{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:1px;
+    background:var(--rule);
+    border:1px solid var(--rule);
+    margin:2.4rem 0;
+  }
+  .facts .fact{
+    background:var(--card); padding:1.3rem 1.1rem; text-align:center;
+  }
+  .facts .fact .n{
+    font-family:'Playfair Display', serif; font-weight:700;
+    font-size:1.5rem; color:var(--maroon); display:block; margin-bottom:0.25rem;
+  }
+  .facts .fact .l{
+    font-family:'Cinzel', serif; font-size:0.62rem; letter-spacing:0.1em;
+    text-transform:uppercase; color:var(--ink-soft);
+  }
+  @media (max-width:560px){ .facts{ grid-template-columns:1fr; } }
+
+  .join{
+    background:var(--maroon);
+    color:#f7ecd8;
+    padding:3.4rem 0;
+  }
+  .join h2{ color:#fbf3e3; }
+  .join .eyebrow{ color:var(--gold-bright); }
+  .join p{ color:#ecd9c3; }
+  .join .address{
+    font-family:'Playfair Display', serif;
+    font-size:1.15rem;
+    color:#fbf3e3;
+    margin-top:1.6rem;
+  }
+
+  .map{
+    margin-top:1.6rem;
+    border:1px solid rgba(255,255,255,0.18);
+    overflow:hidden;
+  }
+  .map iframe{
+    width:100%; height:300px; border:0; display:block;
+  }
+  .directions{
+    display:inline-block;
+    margin-top:1rem;
+    color:var(--gold-bright);
+    font-family:'Cinzel', serif;
+    font-size:0.72rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    text-decoration:none;
+    border-bottom:1px solid currentColor;
+    padding-bottom:2px;
+  }
+
+  footer{
+    padding:2.6rem 0 3.2rem;
+    text-align:center;
+  }
+  footer .blessing{
+    font-family:'Playfair Display', serif; font-style:italic;
+    font-size:1.15rem; color:var(--maroon); margin-bottom:1.8rem;
+  }
+  footer .sources{
+    font-size:0.78rem; color:var(--ink-soft); line-height:1.9;
+  }
+  footer .sources a{ color:var(--ink-soft); }
+  footer .sources a:hover{ color:var(--maroon); }
+
+  html{ scroll-behavior:smooth; }
+  section.block, section.join{ scroll-margin-top:64px; }
+  .hero{ scroll-margin-top:0; }
+
+  /* ---------- Site nav ---------- */
+  .site-nav{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    background:rgba(20,13,9,0.92);
+    backdrop-filter:blur(6px);
+    -webkit-backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+  .site-nav-inner{
+    max-width:1300px; margin:0 auto; padding:0 20px;
+    display:flex; align-items:center; justify-content:space-between;
+    height:56px;
+  }
+  .site-nav-brand{
+    font-family:'Cinzel', serif; font-size:0.8rem; letter-spacing:0.08em;
+    color:#f3e6d3; text-decoration:none; text-transform:uppercase;
+    white-space:nowrap;
+  }
+  .site-nav-menu{
+    list-style:none; display:flex; gap:1.2rem; margin:0; padding:0;
+  }
+  .site-nav-menu a{
+    font-family:'Cinzel', serif; font-size:0.66rem; letter-spacing:0.07em;
+    text-transform:uppercase; color:#d9c3a3; text-decoration:none;
+    white-space:nowrap;
+    transition:color .15s ease;
+  }
+  .site-nav-menu a:hover{ color:#e3bb6c; }
+
+  .site-nav-toggle{
+    display:none;
+    flex-direction:column; justify-content:center; gap:4px;
+    width:32px; height:32px;
+    background:none; border:0; cursor:pointer; padding:8px;
+    margin:-8px -8px -8px 0;
+  }
+  .site-nav-toggle span{
+    width:100%; height:2px; background:#f3e6d3; display:block;
+  }
+
+  @media (max-width: 1320px){
+    .site-nav-menu{
+      position:fixed; top:56px; left:0; right:0;
+      flex-direction:column; gap:0;
+      background:rgba(20,13,9,0.98);
+      max-height:0; overflow:hidden;
+      transition:max-height .25s ease;
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+    .site-nav-menu.open{ max-height:70vh; overflow-y:auto; }
+    .site-nav-menu li{ border-top:1px solid rgba(255,255,255,0.08); }
+    .site-nav-menu a{ display:block; padding:0.95rem 20px; }
+    .site-nav-toggle{ display:flex; }
+  }
+</style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="site-nav-inner">
+      <a class="site-nav-brand" href="#top">Meskel &amp; Demera</a>
+      <button class="site-nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNavMenu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="site-nav-menu" id="siteNavMenu">
+        <li><a href="#feast">The Feast</a></li>
+        <li><a href="#scripture">Scripture</a></li>
+        <li><a href="#sign">A Sign Remade</a></li>
+        <li><a href="#buried">Buried &amp; Lost</a></li>
+        <li><a href="#helena">Helena's Search</a></li>
+        <li><a href="#demera">Demera</a></li>
+        <li><a href="#fire">The Fire</a></li>
+        <li><a href="#flowers">Meskel Flowers</a></li>
+        <li><a href="#legacy">Why It Matters</a></li>
+        <li><a href="#visit">Visit Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="hero" id="top">
+    <img src="images/demera-flames.jpg" alt="The Demera bonfire ablaze at night during Meskel celebrations">
+    <div class="hero-content">
+      <div class="eyebrow">September 26–27 &middot; Meskerem 16–17</div>
+      <div class="hero-amharic">መስቀል &nbsp;·&nbsp; ደመራ</div>
+      <h1>Meskel &amp; Demera</h1>
+      <p class="hero-sub">The Finding of the True Cross: a feast of fire, flowers, and faith in the Ethiopian Orthodox Tewahedo tradition.</p>
+      <div class="scroll-cue">Welcome, friends and family</div>
+    </div>
+  </div>
+
+  <section class="block" id="feast">
+    <div class="wrap">
+      <p class="lede">The faithful gather around a great bonfire crowned with a wooden cross and yellow flowers. This page is a short guide to what we celebrate, and why it still matters.</p>
+
+      <div class="divider"><span class="mark"></span></div>
+
+      <div class="eyebrow">What we celebrate</div>
+      <h2>The Feast of the Cross</h2>
+      <p><strong>Meskel</strong> (መስቀል) is the Ge'ez and Amharic word for "cross." It is the name of one of the great feasts of the Ethiopian and Eritrean Orthodox Tewahedo Churches: the commemoration of the finding of the True Cross on which Christ was crucified.</p>
+      <p>To understand why, the story has to begin earlier. Humanity had suffered greatly for the sin Adam and Eve committed through the temptation of the Devil, and the whole human race was rendered slave to Satan. It was not until our Lord Jesus Christ, one of the three Persons of the Holy Trinity, came that we were redeemed.</p>
+      <p>Christ came into the world in human form to atone for the wrongdoing of humankind and fulfill divine justice. Through His death He reopened the gate of heaven, which until then no human, sinner or righteous, could enter. Between our Creator and us stood a great wall that no one could tear down but our Lord Jesus Christ Himself.</p>
+    </div>
+  </section>
+
+  <section class="block alt" id="scripture">
+    <div class="wrap">
+      <div class="eyebrow">Foretold long before</div>
+      <h2>Written Into Scripture</h2>
+      <p>The Church teaches that the Cross was not a surprise. It had been foreshadowed for centuries in the Scriptures, in wood and staff and serpent, waiting to be understood.</p>
+      <div class="facts">
+        <div class="fact"><span class="n">Noah's Ark</span><span class="l">Genesis 7:1</span></div>
+        <div class="fact"><span class="n">Moses' Staff</span><span class="l">Exodus 4:2&ndash;9</span></div>
+        <div class="fact"><span class="n">The Bronze Serpent</span><span class="l">Numbers 21:9</span></div>
+      </div>
+      <blockquote>
+        "Thou hast set up a banner for those who fear thee, to rally to it from the bow, that thy beloved may be delivered."
+        <cite>Psalm 59:4 (LXX numbering)</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="block" id="sign">
+    <div class="wrap">
+      <div class="two-col">
+        <div class="col-text">
+          <div class="eyebrow">From curse to victory</div>
+          <h2>A Sign Remade</h2>
+          <p>Before the Crucifixion, the cross was the symbol of the death penalty, of curse and humiliation. But after Christ's crucifixion upon it, the cross became a sign of spiritual freedom and a throne of peace: a sign of freedom and victory for all Christians.</p>
+          <p>Constantine the Great is said to have seen the Cross appear in the sky in a form of light, and from that vision it has lived on as a symbol of victory. As Saint Paul wrote, <em>"the preaching of the cross is to them that perish foolishness; but unto us which are saved, it is the power of God"</em> (1 Corinthians 1:18). The faithful who cross themselves in its sign are taught that they overcome demons and evil desires through it.</p>
+        </div>
+        <div class="col-img">
+          <figure class="figure">
+            <img src="images/processional-cross.jpg" alt="Ornate Ethiopian processional hand crosses of gold and silver, carried by clergy">
+            <figcaption>Processional hand crosses, carried and kissed by the faithful in the ceremonies of the Church.</figcaption>
+          </figure>
+        </div>
+      </div>
+      <blockquote>
+        "The Cross is our power, the Cross is our strength, the Cross is our ransom, the Cross is the salvation of our soul."
+        <cite>From the Church's hymns of veneration to the Holy Cross</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="block alt" id="buried">
+    <div class="wrap">
+      <div class="eyebrow">How it was lost</div>
+      <h2>Buried and Forgotten</h2>
+      <p>The Cross went on working countless miracles among believers: the sick were healed simply by touching it. Drawn by these wonders, many came to faith. Seeing this, those who resented it threw the Cross into a rubbish pit, and over time the refuse piled so high that the place took the shape of an ordinary hill.</p>
+      <p>Decades later, in the year 70, the Roman general Titus invaded Jerusalem and its Christians scattered. By the time they could return, the city itself had changed so much that even those who knew roughly where the Cross lay could no longer place it. It would remain hidden for more than three hundred years.</p>
+    </div>
+  </section>
+
+  <section class="block" id="helena">
+    <div class="wrap">
+      <div class="two-col reverse">
+        <div class="col-img">
+          <figure class="figure">
+            <img src="images/clergy-procession-aisle.jpg" alt="Rows of clergy in white ceremonial vestments lining a flower-patterned aisle, holding staffs and drums, facing each other before the procession">
+            <figcaption>Priests line the way in prayer, much as Helena once summoned the priests of Jerusalem before her search.</figcaption>
+          </figure>
+        </div>
+        <div class="col-text">
+          <div class="eyebrow">How it was found</div>
+          <h2>Helena's Search</h2>
+          <p>Two hundred years passed before Queen Helena, mother of Constantine the Great, set out to find where the Cross was buried and recover it. She prayed for God's will and help, then journeyed to Jerusalem to carry out her search. But after so long, no one could tell her the exact place.</p>
+          <p>She sought the counsel of an elder named Kiriakos, who advised her:</p>
+          <blockquote>
+            "You need not tire out yourself and others in vain. Make people gather wood and pile it. Put incense on it and burn it. Following where the smoke drifts, dig, and you will find the Cross."
+            <cite>Attributed to the elder Kiriakos, in the Synaxarium of Megabit 10</cite>
+          </blockquote>
+          <p>Helena did as she was told. She summoned the priests to mass prayer, lit the bonfire, and watched the smoke billow into the sky and bend down over one hill. She had that place dug, and three crosses were unearthed there; the True Cross was known from the other two by the enormous miracles it worked. This is why the Church keeps two dates in its honor each year: Meskerem 17 (September 27) when Helena began to dig, and Megabit 10 (March 19) when the Cross was finally found.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt" id="demera">
+    <div class="wrap">
+      <div class="two-col">
+        <div class="col-text">
+          <div class="eyebrow">A tradition renewed</div>
+          <h2>Demera, "the Gathering"</h2>
+          <p>The word <strong>Demera</strong> means "gathering" or "bundle." It is the name given to the great pyre built each year in memory of Helena's bonfire: a tall, conical stack of branches, decorated with bunches of golden flowers and topped with a wooden cross.</p>
+          <p>On the eve of the feast, people bring bundles of wood and small torches, known as chibo, to build the Demera together. Priests pray over it and sing, then lead a procession that circles it, chanting, "Iyoha Abebaye, Meskerem Tebaye": behold, Meskerem has dawned, and the flowers have blossomed. At home, families light their own chibo and keep the feast in miniature.</p>
+          <p>In some places the Demera is lit that same evening; in others, only the following morning. Either way, it is the same fire, and the same remembrance.</p>
+        </div>
+        <div class="col-img">
+          <figure class="figure">
+            <img src="images/demera-pyre-before-lit.jpg" alt="Priests in gold ceremonial vestments gathered around the newly built Demera, a tall pyre of green branches topped with a cross and golden flowers, before it is lit">
+            <figcaption>Clergy gather around the newly built Demera: branches, cross, and flowers bound together and ready for the flame.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="fire">
+    <div class="wrap">
+      <div class="eyebrow">The night of the fire</div>
+      <h2>The Fire and the Ash</h2>
+      <figure class="figure">
+        <img src="images/demera-flames.jpg" alt="The Demera bonfire fully ablaze against a night sky, silhouettes of the gathered crowd below">
+        <figcaption>The Demera in full blaze: the moment of the feast, echoing the bonfire of Queen Helena.</figcaption>
+      </figure>
+      <p>Those who gather around the fire while it burns describe an inner feeling of brightness, a warmth beyond the fire itself. The following morning brings the Meskel festivity proper: believers return to the site and, using its ashes, mark their foreheads with the sign of the cross, and sprinkle it over their cattle too.</p>
+      <p>It is a quiet, personal act at the close of a communal celebration. The cross traced in ash, like the hand crosses priests carry and offer for the faithful to kiss, carries forward the same faith that first found the Cross beneath the hill.</p>
+    </div>
+  </section>
+
+  <section class="block alt" id="flowers">
+    <div class="wrap">
+      <div class="two-col reverse">
+        <div class="col-img">
+          <figure class="figure">
+            <img src="images/meskel-flowers-adey-abeba.jpg" alt="A field of Adey Abeba, the yellow Meskel flower, blooming across the Ethiopian highlands">
+            <figcaption>Adey Abeba, the Meskel flower, carpets the highlands as the rains end each September.</figcaption>
+          </figure>
+        </div>
+        <div class="col-text">
+          <div class="eyebrow">Flowers of the season</div>
+          <h2>Adey Abeba, the Meskel flower</h2>
+          <p>Every September, as Ethiopia's long rainy season ends, the highlands fill with <strong>Adey Abeba</strong>, also known as Meskel Daisies: small, brilliant yellow flowers that bloom nowhere else in the world at this scale. Their mass blooming coincides with the feast itself, so closely that the two have become inseparable.</p>
+          <p>The flowers are cut and bundled to decorate the Demera and the doors of churches and homes; children weave them into crowns and garlands. Their sudden gold against the green hills is, for many Ethiopians, the surest sign that a season of renewal, homecoming, and celebration has arrived.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="legacy">
+    <div class="wrap">
+      <div class="eyebrow">A living tradition</div>
+      <h2>Why it still matters</h2>
+      <p>In the Middle Ages, the Patriarch of Alexandria, who held part of the True Cross, gave the Ethiopian Emperor Dawit a piece of it in return for the protection Ethiopia afforded to Coptic Christians. That piece is reputedly held to this day at Gishen Mariam church, about seventy kilometers northwest of Dessie in northern Ethiopia, and Ethiopians have kept this day in its honor for a millennium.</p>
+      <p>Meskel is kept not only by the Ethiopian Orthodox Tewahedo Church but, in smaller ways, by Ethiopian and Eritrean Catholic and Protestant communities too: a feast that draws the wider Christian family together, in every place its people have made a home. Our forefathers preserved this age-old tradition; passing it on to the coming generations now lies with each of us.</p>
+
+      <div class="figure">
+        <img src="images/gishen-mariam.jpg" alt="The mountaintop church of Gishen Mariam in northern Ethiopia, reached by a stone stairway to a cross-topped shrine">
+        <figcaption>Gishen Mariam, the mountain church in northern Ethiopia said to hold the relic of the True Cross to this day.</figcaption>
+      </div>
+
+      <div class="facts">
+        <div class="fact"><span class="n">2013</span><span class="l">UNESCO Heritage</span></div>
+        <div class="fact"><span class="n">4th c.</span><span class="l">Cross Found by St. Helena</span></div>
+        <div class="fact"><span class="n">Twice a Year</span><span class="l">Meskerem 17 &amp; Megabit 10</span></div>
+      </div>
+      <p style="font-size:0.92rem; color:var(--ink-soft); margin-top:-0.8rem;">In 2013, UNESCO inscribed the celebration, "the commemoration feast of the finding of the True Holy Cross of Christ," on the Representative List of the Intangible Cultural Heritage of Humanity, recognizing its role in strengthening family ties, reconciliation, and community across generations.</p>
+    </div>
+  </section>
+
+  <section class="join" id="visit">
+    <div class="wrap">
+      <div class="eyebrow">Visit us</div>
+      <h2>You Are Welcome</h2>
+      <p>If you are reading this while the Demera burns nearby and would like to know more about our church, or to join us for a service, we would love to have you.</p>
+      <p class="address">Hohite Semay Saint Mary Ethiopian Orthodox Tewahido Church<br>304 Eighth Street, New Westminster, BC V3M 3R1</p>
+      <div class="map">
+        <iframe src="https://maps.google.com/maps?q=304%20Eighth%20Street%2C%20New%20Westminster%2C%20BC%20V3M%203R1&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen title="Map to Hohite Semay Saint Mary Ethiopian Orthodox Tewahido Church"></iframe>
+      </div>
+      <a class="directions" href="https://www.google.com/maps/search/?api=1&query=304+Eighth+Street+New+Westminster+BC+V3M+3R1" target="_blank" rel="noopener">Get directions &rarr;</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="divider"><span class="mark"></span></div>
+      <p class="blessing">Melkam Meskel: a blessed Feast of the Cross to you and your family.</p>
+      <div class="sources">
+        Sources: <a href="https://eotcmk.org/e/meskel-finding-of-the-true-cross-2/" target="_blank" rel="noopener">Mahibere Kidusan, "Meskel: Finding of the True Cross"</a> ·
+        <a href="https://eotcmk.org/e/the-holy-cross-and-its-celebration/" target="_blank" rel="noopener">Mahibere Kidusan, "The Holy Cross and its Celebration"</a>
+        <br>Photographs via Wikimedia Commons, shared under free-use licenses, and from Gazette Plus / Abdi Sedet.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var toggle = document.getElementById('navToggle');
+      var menu = document.getElementById('siteNavMenu');
+      if(!toggle || !menu) return;
+      toggle.addEventListener('click', function(){
+        var isOpen = menu.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+      menu.querySelectorAll('a').forEach(function(link){
+        link.addEventListener('click', function(){
+          menu.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
